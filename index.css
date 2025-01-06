@@ -94,7 +94,7 @@ section {
 }
 
 .hero-section {
-  background-image: url(beardcuts.jpg);
+  background-image: url(beardcuts.webp);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
   height: 105vh;
   width: 100%;
@@ -172,6 +172,7 @@ section {
   visibility: hidden;
   opacity: 0;
 }
+
 
 .slide-in {
   animation: slideInRight 1s ease forwards;
