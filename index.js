@@ -6,15 +6,15 @@ function typeText() {
   if (index < textToType.length) {
     typingElement.textContent += textToType.charAt(index);
     index++;
-    setTimeout(typeText, 95); // Adjust typing speed
+    setTimeout(typeText, 95); // Adjust my typing speed
   } else {
-    // Reveal h4 after typing finishes
+ 
     document.getElementById('tagline').style.visibility = 'visible';
   }
 }
-// Start typing animation with a delay
+// Start typing my animation with a delay
 document.addEventListener('DOMContentLoaded', () => {
-  setTimeout(typeText, 2000); // Delay start by 1 second
+  setTimeout(typeText, 2000); // Delay 
 });
 
 const observer = new IntersectionObserver((entries) => {
@@ -28,19 +28,46 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
+const HiddenElements = document.querySelectorAll('.cuts');
+HiddenElements.forEach((el) => observer.observe(el));
+
 const navItems = document.querySelectorAll(".nav-item");
 navItems.forEach((item) => {
   item.addEventListener('click', function() {
+  
     navItems.forEach((item) => {
-      item.classList.remove("active")
-    })
+      item.classList.remove("active");
+    });
     
-    item.classList.add("active")
-  })
-})
 
-const HiddenElements = document.querySelectorAll('.cuts');
-HiddenElements.forEach((el) => observer.observe(el));
+    item.classList.add("active");
+    
+  
+    nav.classList.remove('active');
+  });
+});
+
+
+const sections = document.querySelectorAll('section');
+
+window.addEventListener('scroll', () => {
+  let currentSection = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    if (window.scrollY >= sectionTop - 200) {
+      currentSection = section.getAttribute('id');
+    }
+  });
+
+  navItems.forEach(item => {
+    item.classList.remove('active');
+    if (item.getAttribute('href').includes(currentSection)) {
+      item.classList.add('active');
+    }
+  });
+});  // I am ensuring that the active class is also properly synchronized with sections as I scroll into view.
+
+
 
 const bar = document.getElementById('bar');
 const close = document.getElementById('close');
