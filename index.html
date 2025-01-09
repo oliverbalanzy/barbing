@@ -30,7 +30,7 @@
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oxygen:wght@300;400;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap"
         rel="stylesheet">
 
-      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />    
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -61,7 +61,7 @@
         <div class="hero-button">
             <a href="#feature-section"><button>Get started </button></a>
     </section>
-    <section id="feature-section"  class="cuts">
+    <section id="feature-section" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000" class="cuts">
         <div class="padding-overide">
             <h2>Premium Services</h2>
             <p>The Services We Offer </p>
@@ -115,10 +115,10 @@
         </div>
     </section>
 
-    <section id="haircuts"  style="scroll-margin-top: 100px;" class="padding">
+    <section id="haircuts" data-aos="fade-in" data-aos-delay="400" data-aos-duration="1000" style="scroll-margin-top: 100px;" class="padding">
         <h2>Hair Cuts and Pricing</h2>
         <p>Trending Hair Styles</p>
-        <div class="hair-container">
+        <div class="hair-container" data-aos="fade-left" data-aos-delay="450">
             <div class="styles">
                 <img src="Twist.webp" alt="">
                 <div class="des">
@@ -185,14 +185,14 @@
             </div>
         </div>
     </section>
-    <section id="about-us">
+    <section id="about-us" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1000">
         <div class="about-content">
             <h2>About us</h2>
             <p> Our salon and haircuts are of the <br> highest quality. Come and enjoy our premium <br> services.</p>
         </div>
         <div class="about-img"><img src="—Pngtree—haircut barbershop barber beauty_3922940.png" alt=""></div>
     </section>
-    <section id="feature-sec2" class="cuts">
+    <section id="feature-sec2" data-aos="zoom-in-up" data-aos-delay="600" data-aos-duration="1000" class="cuts">
         <div class="features">
             <div class="service">
                 <img src="salon.png" alt="" class="serviceIcon">
@@ -243,9 +243,9 @@
     </section>
     <section id="about-details">
         <div class="detail-img">
-            <img src="relaxed-man.webp" alt="Barbing salon image">
+            <img src="relaxed-man.webp" data-aos="fade-up-right" data-aos-delay="700" data-aos-duration="1000"  alt="Barbing salon image">
         </div>
-        <div class="container">
+        <div class="container" data-aos="fade-in-left" data-aos-delay="750" data-aos-duration="1000">
             <h2>Visit our <br> barbing salon</h2>
             <div class="detail-loc">
                 <h3>Location:</h3>
@@ -268,7 +268,7 @@
         </div>
     </section>
     <section id="contact">
-        <div class="contact-content">
+        <div class="contact-content" data-aos="fade-up-right" data-aos-delay="800" data-aos-duration="1000">
             <h2>Contact us & submit your feedback</h2>
             <p class="intro-text">
                 Gochujang raw denim gentrify pug, ugh mukbang green juice chambray tousled.
@@ -288,7 +288,7 @@
                 Gochujang raw denim gentrify pug, ugh mukbang green juice cham.
             </p>
         </div>
-        <div class="contact-form">
+        <div class="contact-form" data-aos="fade-up-left" data-aos-delay="800" data-aos-duration="1000">
             <form>
                 <input type="text" placeholder="Enter your name" required />
                 <input type="email" placeholder="Enter your email" required />
@@ -333,6 +333,9 @@
         </div>
     </footer>
     <script src="index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
-
 </html>
